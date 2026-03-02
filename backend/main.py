@@ -6,7 +6,7 @@ app = FastAPI(title="External Sort Visualizer API")
 # Cho phép React gọi API không bị chặn
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Cổng mặc định của Vite
+    allow_origins=["*"],  # Cho phép vercel kết nối Frontend-Backend
     allow_methods=["*"],
     allow_headers=["*"],
 )
