@@ -188,5 +188,6 @@ async def generate_file(num_numbers: int = 100):
 
 
 @app.get("/")
+@app.head("/")
 def root():
     return {"message": "External Sort API đang chạy"}
